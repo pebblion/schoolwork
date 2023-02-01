@@ -1,0 +1,39 @@
+package FilesProject;
+
+//Student Name: Nathan Wandera
+//LSU ID: 891973040
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.util.Random;
+
+public class FilesProject
+{
+    public static void main(String[] args) throws FileNotFoundException
+        {
+            float total = 0;
+            
+            File inputFile = new File("numbers.txt");
+            PrintWriter out = new PrintWriter(inputFile);
+            Random rand = new Random();
+
+            for(int i = 0; i < 1000; i++)
+            {
+               out.println(rand.nextInt(1001));
+            }
+            out.close();
+
+            Scanner scan = new Scanner(inputFile);
+
+            while(scan.hasNextInt())
+            {
+                total += scan.nextInt();
+            }
+            
+            scan.close();
+
+            System.out.printf("%.2f", (total/1000) );
+        }   
+}
