@@ -1,0 +1,1 @@
+A showcase of lighting and clipping in OpenGL
