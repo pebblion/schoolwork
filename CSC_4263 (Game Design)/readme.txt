@@ -1,1 +1,1 @@
-programs writtin for video game design course
+programs written for video game design course
